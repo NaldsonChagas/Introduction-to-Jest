@@ -1,0 +1,27 @@
+{
+  "name": "jest-introduction",
+  "version": "1.0.0",
+  "description": "Learning how to use Jest for tests",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "npx jest"
+  },
+  "author": "Naldson Chagas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^5.21.13",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.0.1",
+    "supertest": "^4.0.2"
+  }
+}
