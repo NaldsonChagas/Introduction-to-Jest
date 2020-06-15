@@ -5,7 +5,10 @@ const connection = require('../config')
 const Product = connection.define('product', {
   title: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   },
   price: {
     type: DataTypes.FLOAT,
@@ -13,7 +16,7 @@ const Product = connection.define('product', {
   },
   description: {
     type: DataTypes.TEXT,
-    allowNull: true
+    allowNull: false
   }
 })
 

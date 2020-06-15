@@ -11,9 +11,12 @@ module.exports = {
         description
       })
       response.json({ savedProduct })
-    } catch (err) {
-      response.status(500).json({ message: 'Was not possible save the sended product' })
-      throw new Error(err)
+    } catch (e) {
+      if (!title || !price || description === null) {
+        response.status(400).json({ message: 'Invalid product data' })
+      } else {
+        response.status(500).json({ message: 'Was not possible complete your request' })
+      }
     }
   }
 }
